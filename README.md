@@ -1,10 +1,12 @@
-# IOCs
+This repository contains IOCs and scripts for the Andariel's APT group research published here: https://threatray.com/blog/abc
+
+## IOCs
 
 The `packer_configs.csv` file contains a list of packed TigerRAT samples and their packer details.
 The `payload_configs.csv` file contains a list of the unpacked TigerRAT samples and their extracted config values.
 
 
-# Scripts
+## Scripts
 
 Two scripts are used to unpack packed TigerRAT samples and extract their config values.
 
