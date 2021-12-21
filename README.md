@@ -1,21 +1,18 @@
-This repository contains IOCs and scripts for the Andariel's APT group research published here: https://threatray.com/blog/abc
+This repository contains scripts and IOCs for the Andariel APT group research published in December 2021 accessible here: https://threatray.com/blog/establishing-the-tigerrat-and-tigerdownloader-malware-families
 
-## IOCs
-
-The `packer_configs.csv` file contains a list of packed TigerRAT samples and their packer details.
-The `payload_configs.csv` file contains a list of the unpacked TigerRAT samples and their extracted config values.
+Please refer to the blog post for further background information.
 
 
 ## Scripts
 
-Two scripts are used to unpack packed TigerRAT samples and extract their config values.
+Two scripts are used to unpack TigerDownloader and TigerRAT samples and extract their config values.
 
 These scripts require Python 3 and pip to be installed. Install the additional requirements with:
 ```
 pip3 install pefile
 ```
 
-The script `unpack_samples.py` unpacks packed TigerRAT samples.
+The script `unpack_samples.py` unpacks packed TigerDownloader and TigerRAT samples.
 
 ```
 $ python3 unpack_samples.py -h
@@ -47,7 +44,7 @@ $ sha256sum tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23ce411deab29b7afd782b23352
 5c2f339362d0cd8e5a8e3105c9c56971087bea2701ea3b7324771b0ea2c26c6c  tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23ce411deab29b7afd782b23352e698f.unpacked
 ```
 
-The script `configuration_extractor.py` extracts configs from unpacked TigerRAT samples.
+The script `configuration_extractor.py` extracts configs from unpacked TigerDownloader and TigerRAT samples.
 
 ```
 $ python3 configuration_extractor.py -h
@@ -72,3 +69,9 @@ $ python3 configuration_extractor.py tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23
 	CNC: http://mail.sisnet.co.kr/jsp/user/sms/sms_recv.jsp
 	CNC: http://mail.neocyon.com/jsp/user/sms/sms_recv.jsp
 ```
+
+## IOCs
+
+The `packer_configs.csv` file contains a list of packed TigerDownloader and TigerRAT samples and their packer details.
+The `payload_configs.csv` file contains a list of the unpacked TigerDownloader and TigerRAT samples and their extracted config values.
+
