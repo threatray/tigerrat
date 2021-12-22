@@ -5,9 +5,9 @@ Please refer to the blog post for further background information.
 
 ## Scripts
 
-Two scripts are used to unpack TigerDownloader and TigerRAT samples and extract their config values.
+Two scripts are provided to unpack TigerDownloader and TigerRAT samples, as well as extract their config values.
 
-These scripts require Python 3 and pip to be installed. Install the additional requirements with:
+These scripts require Python 3 and pip and the `pefile` library to be installed. Install `pefile` with:
 ```
 pip3 install pefile
 ```
@@ -44,7 +44,7 @@ $ sha256sum tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23ce411deab29b7afd782b23352
 5c2f339362d0cd8e5a8e3105c9c56971087bea2701ea3b7324771b0ea2c26c6c  tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23ce411deab29b7afd782b23352e698f.unpacked
 ```
 
-The script `configuration_extractor.py` extracts configs from unpacked TigerDownloader and TigerRAT samples.
+The script `configuration_extractor.py` extracts config values from unpacked TigerDownloader and TigerRAT samples.
 
 ```
 $ python3 configuration_extractor.py -h
@@ -54,7 +54,7 @@ Simple script to extract configuration from Andariel's APT group samples
 related to its Tiger tooling (TigerRAT, TigerDownloader)
 
 positional arguments:
-  samples     A unpacked PE file of Tiger tooling, the Downloader or the RAT
+  samples     An unpacked PE file of Tiger tooling, the Downloader or the RAT
               (TigerRAT)
 
 optional arguments:
@@ -72,6 +72,4 @@ $ python3 configuration_extractor.py tigerout/f4765f7b089d99b1cdcebf3ad7ba7e3e23
 
 ## IOCs
 
-The `packer_configs.csv` file contains a list of packed TigerDownloader and TigerRAT samples and their packer details.
-The `payload_configs.csv` file contains a list of the unpacked TigerDownloader and TigerRAT samples and their extracted config values.
-
+Two CSV files are provided with metadata and config values on the packed (packer_configs.csv) and unpacked (payload_configs.csv) TigerDownloader and TigerRAT samples.
