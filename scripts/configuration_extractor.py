@@ -29,7 +29,7 @@ def main(samples):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Simple script to extract configuration from Andariel\'s APT group samples related to its Tiger tooling (TigerRAT, TigerDownloader)')
-    parser.add_argument('samples', type=str, nargs='+', help='A unpacked PE file of Tiger tooling, the Downloader or the RAT (TigerRAT)')
+    parser.add_argument('samples', type=str, nargs='+', help='An unpacked PE file of Tiger tooling, the Downloader or the RAT (TigerRAT)')
     args = parser.parse_args()
     main(args.samples)
 
